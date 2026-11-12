@@ -1,0 +1,7 @@
+# ConectaMap — dependências do dashboard (Streamlit Community Cloud e execução local)
+# Testado com Python 3.13: versões mínimas abaixo e versões atuais (streamlit 1.67, plotly 7.1, pandas 3.1, numpy 2.5).
+# Para os notebooks, use requirements-notebooks.txt.
+streamlit>=1.55     # versões anteriores não têm recursos usados pelo app (ex.: st.space) e falham nos testes
+plotly>=5.24        # choroplethmap (MapLibre): mapa sem servidor externo de blocos
+pandas>=2.2
+numpy>=2.1

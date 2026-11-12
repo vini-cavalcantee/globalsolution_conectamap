@@ -1,0 +1,3 @@
+versao,calibracao_geral,inclinacao,decil_superior,brier_vs_B2p,aprovada
+rf_bruto,0/4,2/4,3/4,4/4,False
+rf_platt,1/4,3/4,3/4,4/4,False

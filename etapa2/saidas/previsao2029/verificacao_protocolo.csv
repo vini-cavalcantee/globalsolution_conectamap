@@ -1,0 +1,12 @@
+verificacao,ok,detalhe
+Protocolo íntegro (assinatura do conteúdo),True,5506786ef9c5
+"Features = FEATURES_MODELO_PRINCIPAL (30, só Anatel)",True,30
+Algoritmo e hiperparâmetros congelados,True,"{""max_features"": ""sqrt"", ""min_samples_leaf"": 300}"
+Pré-processamento: imputação pela mediana do treino + indicadores de ausência,True,imputacao → modelo
+Horizonte de 36 meses,True,2029-02
+Origem 2026-02 sem alvo observado,True,alvo vazio
+Nenhuma informação posterior à origem (grade termina em 2026-02),True,2026-02
+Censo fora das features,True,0 variáveis
+10 coortes 2014–2023 elegíveis (alvo de treino ≤ 2026-02),True,10 coortes. 55.686 pares
+Todos os municípios com features na origem 2026-02,True,5570
+"Ausências em 2026-02 só na feature estruturalmente vazia (nunca sinalizado), tratada pela imputação + indicador do protocolo",True,88.4% sem sinalização anterior

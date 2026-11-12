@@ -1,0 +1,9 @@
+# ConectaMap — dependências dos notebooks e dos testes da Etapa 2
+# Testado com Python 3.13, pandas 3.0.5, numpy 2.5.3, matplotlib 3.11.2 e scikit-learn 1.9.1.
+# A conferência byte a byte do Notebook 2 com as saídas aprovadas pressupõe versões equivalentes.
+pandas>=2.2
+numpy>=2.0
+matplotlib>=3.9      # tick_labels no boxplot (gráficos da previsão)
+scikit-learn>=1.4    # Etapa 2: Random Forest, baselines e calibração
+pytest>=8            # o Notebook 2 executa os testes de tests/
+jupyterlab>=4        # para abrir e executar os notebooks (inclui o ipykernel)

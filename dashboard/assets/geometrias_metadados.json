@@ -1,0 +1,43 @@
+{
+ "fonte": "IBGE — Malha Municipal 2022, versão simplificada distribuída pelo pacote geobr (IPEA)",
+ "url_distribuicao": "https://github.com/ipeaGIT/geobr/releases/download/v1.7.0/<código UF>municipality_2022_simplified.gpkg",
+ "ano_malha": 2022,
+ "sistema_referencia": "SIRGAS 2000 (EPSG:4674), coordenadas geográficas em graus",
+ "preparacao": "leitura com sqlite3 + shapely; simplificação por município com tolerância de 0.01 grau (preserve_topology=True); coordenadas arredondadas em 3 casas; contorno das UFs pela união dos municípios (tolerância 2,5× maior)",
+ "municipios": 5570,
+ "excluidos": "4300001 e 4300002 (Lagoa Mirim e Lagoa dos Patos): áreas de água da malha, sem município",
+ "data_preparacao": "2026-11-12",
+ "sha256_arquivos_origem": {
+  "11municipality_2022_simplified.gpkg": "3d171de90e503e45b1d18416841a3aaeb51024ec3e79e2cd344b2d7c30b8cb13",
+  "12municipality_2022_simplified.gpkg": "e3a36345e03769b12dfa4518384b3fd11211056aa7d4beba915b44b3fbbe9a77",
+  "13municipality_2022_simplified.gpkg": "8b44c94a39d436280ecc004ec599dc1174f7fdb3ed0fc790b4fb1a4fff2542fb",
+  "14municipality_2022_simplified.gpkg": "a8af5291ec872cb6173905c10eb0da10ba03cb1fa0ed28437dc3f0cb9d50af69",
+  "15municipality_2022_simplified.gpkg": "f4e3f83027e8457bdb56f77cf9452688792bef9b342e41129332b426ed260e8b",
+  "16municipality_2022_simplified.gpkg": "497f09b25f4d453017a907c53dac308ead96e833f79e345ad558c7acbc0462e1",
+  "17municipality_2022_simplified.gpkg": "e149916e7606ab4603b92d3b2b841ea3a377024027acbb4e36e248913a8aacf3",
+  "21municipality_2022_simplified.gpkg": "fd4f8caa255a7d2ed4519a6cdeb0b9d96df0b85e14627296969119eed9e566a3",
+  "22municipality_2022_simplified.gpkg": "71ef5bda05989d79193a6e5e6c225a4f4fa19dab32465b947f83e9c9e2979c3d",
+  "23municipality_2022_simplified.gpkg": "1229987b70751f0e1dcc0e8824c9688f311e39e8835224ab7d82b2103b2f39f7",
+  "24municipality_2022_simplified.gpkg": "e6a740c54f7dded3711fb54bcab0a08d08d09b44e5fe4645461a2a1402eab3b1",
+  "25municipality_2022_simplified.gpkg": "31684f3443cd049935d617880d0bed844d666ca2c969786c04d507278079dbed",
+  "26municipality_2022_simplified.gpkg": "544a6c14bababfc95d28e90c7e091d3278737a8e425841c413ecd1c6596e40cc",
+  "27municipality_2022_simplified.gpkg": "5967caf7d99f3fd506b15d6141477c89bdd26f42cfb97c86486c2a7220929376",
+  "28municipality_2022_simplified.gpkg": "2b61173111b55cd36884576d0c2c56b9c3e57da7d36e45321005679eb2181f15",
+  "29municipality_2022_simplified.gpkg": "cab1ba95fbf35944edb2b81b478241498f1b8872dbe260f4b3909dbf31204a35",
+  "31municipality_2022_simplified.gpkg": "30b31e6135bec2912db94f68b078586858d3f467afd860f5fb08399f24a191a4",
+  "32municipality_2022_simplified.gpkg": "a861c8b796e57b9abb30d31d4136ebc7cf68aaa6dc4de3fdb26561e724ee3834",
+  "33municipality_2022_simplified.gpkg": "a26b2521baaa59f39e8d23e213af78a2ab2ed090df0d6fd2549992e495d2832f",
+  "35municipality_2022_simplified.gpkg": "9436a9ba9a83a4bcff290bc73cf0dfd276a400e549560df5a48e581375a991e0",
+  "41municipality_2022_simplified.gpkg": "144b9092eae4701bccdd0656bce0d313e8ca01752a8c1f5cca69030ef85796dd",
+  "42municipality_2022_simplified.gpkg": "7b9cf42c6300f7c54c8edf8aa51fdf8aff3e721b4a69b1dbc1c71cd7cbff3d87",
+  "43municipality_2022_simplified.gpkg": "179ae7529d7543ddd112ef39ca373bb6dca3800fdc8113908787b2dfc02300d3",
+  "50municipality_2022_simplified.gpkg": "d35cf17f52ecd722756149298e7a310d529a41cc2bf2fc932ba5b6f28c1733df",
+  "51municipality_2022_simplified.gpkg": "dfe095be40230882940682ad2670375a40e2c54fb74f959fc413200f48488f6f",
+  "52municipality_2022_simplified.gpkg": "5a27adcf106b3c85d5ae3c2dbe6cad29e86f1360afc8dc6cd70a31e83036a5f9",
+  "53municipality_2022_simplified.gpkg": "f1720058d6d7a0a9621ab0080f731481ebed5a17264beb56d788e64087bed24e"
+ },
+ "sha256_saidas": {
+  "municipios_2022.geojson": "1829a01b9a27a087e92ed8b65e9dd0a67c2f95630d86bbb1d5aad3db6d1e3b80",
+  "ufs_2022.geojson": "8b3b68b04dd76925d9b96ea1b8b046d158c44703857bc64c3af8cbe91c0b3262"
+ }
+}

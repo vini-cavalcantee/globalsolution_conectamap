@@ -1,0 +1,24 @@
+indicador,municipios,no_top25_rf,secao,feature,mediana_2014,mediana_2023,mediana_2026,p90_treino,p90_2026,max_treino,acima_max_treino_2026,fora_p1_p99_treino_2026,rodada,uso,prevalencia,prob_media
+Feature ausente (exceto a estrutural 'meses desde a última sinalização'),0,0,qualidade_entradas,,,,,,,,,,,,,
+Sem sinalização anterior (feature estrutural vazia; imputada + indicador),4926,1243,qualidade_entradas,,,,,,,,,,,,,
+Mês ausente nos últimos 36 meses,0,0,qualidade_entradas,,,,,,,,,,,,,
+Sinalização causal aberta em fev/2026 (flag ≠ 0),55,28,qualidade_entradas,,,,,,,,,,,,,
+Suspeita estatística nos últimos 36 meses,300,94,qualidade_entradas,,,,,,,,,,,,,
+Histórico menor que 36 meses,0,0,qualidade_entradas,,,,,,,,,,,,,
+Idade da série acima do máximo do treino (efeito do calendário),5541,1379,qualidade_entradas,,,,,,,,,,,,,
+"Densidade acima do p99,5 do treino (valor extremo)",263,4,qualidade_entradas,,,,,,,,,,,,,
+"Alguma feature não estrutural fora da faixa p0,5–p99,5 do treino",1111,169,qualidade_entradas,,,,,,,,,,,,,
+Três ou mais features fora dessa faixa (condição atípica),677,73,qualidade_entradas,,,,,,,,,,,,,
+,,,mudanca_distribuicao,densidade_atual,2.68982,11.9557,17.1331,19.0771,35.7546,991.462,0.000179533,0.104668,,,,
+,,,mudanca_distribuicao,tendencia_36,0.424759,1.49476,1.16583,2.84113,4.19069,117.197,0,0.0441652,,,,
+,,,mudanca_distribuicao,volatilidade_12,0.0203847,0.0903761,0.0788401,0.290683,0.384366,2.38831,0.000179533,0.0251346,,,,
+,,,mudanca_distribuicao,n_meses_ausentes_36,0,0,0,0,0,21,0,0,,,,
+,,,mudanca_distribuicao,n_suspeita_36,0,0,0,0,0,29,0,0.0222621,,,,
+,,,mudanca_distribuicao,flag_causal_atual,0,0,0,0,0,2,0,0.00987433,,,,
+,,,mudanca_distribuicao,meses_desde_primeira_obs,83,191,227,179,227,191,0.994794,0.994794,,,,
+,,,escore_medio_rf,,,,,,,,,,validacao_2019-02,validacao,0.152272,0.124254
+,,,escore_medio_rf,,,,,,,,,,validacao_2020-02,validacao,0.136804,0.106704
+,,,escore_medio_rf,,,,,,,,,,validacao_2021-02,validacao,0.136266,0.0986426
+,,,escore_medio_rf,,,,,,,,,,validacao_2022-02,validacao,0.139138,0.0879507
+,,,escore_medio_rf,,,,,,,,,,teste_2023-02,pos_teste,0.127648,0.0763737
+,,,escore_medio_rf,,,,,,,,,,previsao_2026-02,operacional,,0.0621406

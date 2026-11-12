@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Ambientes virtuais
+.venv/
+venv/
+env/
+
+# Segredos e credenciais (o projeto não usa nenhum)
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Logs e temporários
+*.log
+*.tmp
+
+# Bases históricas do pacote técnico (Grupo B): não versionar.
+# Copie-as para a raiz só para reproduzir os notebooks (ver README).
+dados_brutos/
+dados_tratados/
+auditoria_tecnica/

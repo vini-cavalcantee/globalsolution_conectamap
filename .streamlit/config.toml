@@ -1,0 +1,22 @@
+# Tema do dashboard ConectaMap (lido quando o app é executado a partir da pasta do projeto)
+[theme]
+base = "light"
+primaryColor = "#17324D"
+backgroundColor = "#FCFBF9"
+secondaryBackgroundColor = "#F2F4F5"
+textColor = "#1E2A35"
+borderColor = "#E1E5E7"
+linkColor = "#17324D"
+
+[theme.sidebar]
+backgroundColor = "#F2F4F5"
+
+[server]
+headless = true
+runOnSave = false
+
+[browser]
+gatherUsageStats = false
+
+[client]
+toolbarMode = "viewer"

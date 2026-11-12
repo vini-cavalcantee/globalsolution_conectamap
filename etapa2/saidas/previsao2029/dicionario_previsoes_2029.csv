@@ -1,0 +1,23 @@
+coluna,tipo,grupo,descricao,valores_unidade,uso_dashboard
+id_municipio,texto (7 dígitos),identificação,Código IBGE do município,ler como texto,chave; junção com mapas; o 1º dígito indica a região
+municipio,texto,identificação,"Nome do município (IBGE, Censo 2022)",,rótulo
+sigla_uf,texto,identificação,Sigla da UF,27 UFs,filtro
+densidade_fev2026,decimal,situação observada,Densidade de banda larga fixa publicada pela Anatel em fev/2026,acessos por 100 domicílios,"medida (observada, não prevista)"
+limiar_p25_origem,decimal,situação observada,"P25 nacional da densidade em fev/2026, congelado como limiar do alvo de 2029","8,20 para todos",linha de referência
+abaixo_limiar_em_fev2026,booleano,situação observada,O município já está abaixo do limiar em fev/2026 (fato observado),True / False,filtro
+escore_rf,"decimal [0, 1]",técnico — NÃO CALIBRADO — não é probabilidade,Escore do Random Forest para estar abaixo do limiar em fev/2029. Serve só para ordenar; a calibração não foi homologada. Gravado com 6 algarismos significativos: use posicao_rf para ordenar,"0 a 1, sem unidade",não exibir como % nem como chance; no máximo em tooltip técnico
+posicao_rf,inteiro,ranking e prioridade,Posição no ranking do Random Forest (1 = maior risco relativo),"1 a 5.570, sem empates",ordenação
+posicao_b2,inteiro,ranking e prioridade,Posição no ranking B2 (1 = menor densidade em fev/2026),"1 a 5.570, sem empates (desempate pelo código IBGE)",ordenação
+diferenca_posicoes,inteiro,ranking e prioridade,posicao_b2 − posicao_rf,> 0: o RF coloca o município mais à frente que o B2,comparação RF × B2
+categoria_rf,texto,ranking e prioridade,Categoria relativa no ranking do RF,"maior (top 25%), intermediario (25%–50%), menor (demais)",filtro
+categoria_b2,texto,ranking e prioridade,Categoria relativa no ranking B2,mesmas de categoria_rf,filtro
+concordancia_top25,texto,ranking e prioridade,Em qual top 25% o município está,"ambos, so_rf, so_b2, nenhum",comparação RF × B2
+classificacao_prioridade,texto,ranking e prioridade,"Prioridade relativa: cruzamento das categorias dos dois métodos, sem pesos","alta_consenso, alta_divergente_revisar, intermediaria, menor",indicador principal; cor do mapa
+meses_ausentes_36,inteiro,qualidade dos dados,Meses sem registro nos 36 meses até fev/2026,0 a 36,indicador de qualidade (separado da prioridade)
+flag_causal_fev2026,inteiro,qualidade dos dados,"Sinalização causal de anomalia (regra D, L=12) em fev/2026",0 normal; ±1 suspeita aberta; ±2 persistência reconhecida,indicador de qualidade
+suspeitas_36m,inteiro,qualidade dos dados,Meses com suspeita estatística aberta nos últimos 36 meses,0 a 36,indicador de qualidade
+persistencia_36m,inteiro (0/1),qualidade dos dados,Houve persistência reconhecida (±2) nos últimos 36 meses,0 / 1,indicador de qualidade
+historico_meses,inteiro,qualidade dos dados,Idade da série do município em fev/2026,meses,indicador de qualidade
+tendencia_36,decimal,contexto,Inclinação da densidade nos últimos 36 meses (observada até fev/2026),acessos/100 dom. por ano,contexto (não é previsão)
+alerta_qualidade,booleano,qualidade dos dados,"Algum alerta: flag causal ≠ 0, mês ausente, suspeita em 36 meses, histórico < 36 meses ou 3+ features fora da faixa do treino",True / False,camada separada da prioridade; não altera a categoria
+n_features_fora_faixa_treino,inteiro,qualidade dos dados,"Nº de features fora da faixa p0,5–p99,5 das coortes de treino (condição atípica)",0 a 28,indicador de qualidade

@@ -1,0 +1,20 @@
+feature,grupo,descricao
+densidade_atual,nível,Densidade na origem (acessos por 100 domicílios)
+densidade_lag_12/24/36,nível,"Densidade 12, 24 e 36 meses antes (última observação em até 2 meses antes da data exata)"
+"media_12/36, mediana_12/36",histórico,Média e mediana das observações válidas nos últimos 12 e 36 meses
+variacao_abs_12/24/36,variação,Densidade atual menos a defasada
+variacao_log_12/24/36,variação,ln(1 + atual) − ln(1 + defasada)
+tendencia_24/36,tendência,"Inclinação da reta de mínimos quadrados, em acessos/100 dom. por ano (mín. 6 obs.)"
+volatilidade_12/36,volatilidade,Desvio-padrão das variações log entre observações consecutivas
+n_obs_12/36,qualidade,Observações válidas na janela
+n_meses_ausentes_36,qualidade,Meses mensais ausentes na janela de 36 meses
+fracao_trimestral_36,qualidade,Parte da janela de 36 meses no período trimestral (antes de 2011)
+meses_desde_primeira_obs,qualidade,Idade da série do município na origem
+referencia_insuficiente_atual,qualidade,Menos de 3 observações nos 12 meses anteriores à origem
+flag_causal_atual,anomalia causal,"Flag da regra D causal na origem (0, ±1, ±2), K=5, A=10, L=12"
+n_suspeita_12/36,anomalia causal,Meses com suspeita aberta (±1) nos últimos 12 e 36 meses
+persistencia_36,anomalia causal,Houve persistência reconhecida (±2) nos últimos 36 meses
+meses_desde_ultima_sinalizacao,anomalia causal,Meses desde a última flag diferente de zero (vazio se nunca)
+*_L6,anomalia causal,As mesmas flags com L=6 (sensibilidade)
+abaixo_p25_na_origem,posição,Município abaixo do P25 nacional na própria origem
+censo_*,Censo 2022,18 variáveis do IBGE; vazias quando não disponíveis na origem pelo critério

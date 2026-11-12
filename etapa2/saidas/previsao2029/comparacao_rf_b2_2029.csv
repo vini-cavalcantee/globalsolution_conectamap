@@ -1,0 +1,17 @@
+medida,valor,secao
+Municípios no top 25% (RF),1393,comparacao_top25
+Municípios no top 25% (B2),1393,comparacao_top25
+Selecionados por ambos,1362,comparacao_top25
+Só pelo Random Forest,31,comparacao_top25
+Só pelo B2,31,comparacao_top25
+Concordância do top 25%,97.8%,comparacao_top25
+Correlação de Spearman entre as posições,0.842,comparacao_top25
+Mediana de |diferença de posições| no top 25% de algum método,125,comparacao_top25
+RF principal (L=12) × RF sensibilidade (L=6) | top25_comum,0.9877961234745154,estabilidade
+RF principal (L=12) × B2 (densidade atual) | top25_comum,0.9777458722182341,estabilidade
+RF principal (L=12) × RF sensibilidade (L=6) | entram_ou_saem,17.0,estabilidade
+RF principal (L=12) × B2 (densidade atual) | entram_ou_saem,31.0,estabilidade
+RF principal (L=12) × RF sensibilidade (L=6) | spearman,0.9960683951593858,estabilidade
+RF principal (L=12) × B2 (densidade atual) | spearman,0.8424072449075716,estabilidade
+RF principal (L=12) × RF sensibilidade (L=6) | max_dif_escore,0.024657612247931865,estabilidade
+RF principal (L=12) × B2 (densidade atual) | max_dif_escore,,estabilidade

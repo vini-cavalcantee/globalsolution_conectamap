@@ -1,0 +1,101 @@
+{
+ "algoritmo": "random_forest",
+ "alvo": "alvo_p25_origem",
+ "congelado_em": "2026-11-11",
+ "criterio_selecao": "PR-AUC média V1–V4 (desempate: recall top 25%)",
+ "estado": "congelado antes de qualquer avaliação na origem 2023-02",
+ "features": [
+  "densidade_atual",
+  "densidade_lag_12",
+  "variacao_abs_12",
+  "variacao_log_12",
+  "densidade_lag_24",
+  "variacao_abs_24",
+  "variacao_log_24",
+  "densidade_lag_36",
+  "variacao_abs_36",
+  "variacao_log_36",
+  "media_12",
+  "mediana_12",
+  "n_obs_12",
+  "volatilidade_12",
+  "media_36",
+  "mediana_36",
+  "n_obs_36",
+  "volatilidade_36",
+  "tendencia_24",
+  "tendencia_36",
+  "n_meses_ausentes_36",
+  "fracao_trimestral_36",
+  "meses_desde_primeira_obs",
+  "flag_causal_atual",
+  "n_suspeita_12",
+  "n_suspeita_36",
+  "persistencia_36",
+  "meses_desde_ultima_sinalizacao",
+  "referencia_insuficiente_atual",
+  "abaixo_p25_na_origem"
+ ],
+ "grade_final": {
+  "hist_gradient_boosting": {
+   "learning_rate": [
+    0.02,
+    0.05,
+    0.1
+   ],
+   "max_iter": [
+    200
+   ],
+   "max_leaf_nodes": [
+    7,
+    15
+   ],
+   "min_samples_leaf": [
+    100,
+    300
+   ]
+  },
+  "logistica": {
+   "C": [
+    0.001,
+    0.003,
+    0.01,
+    0.1,
+    1.0
+   ]
+  },
+  "random_forest": {
+   "max_features": [
+    "sqrt",
+    0.5
+   ],
+   "min_samples_leaf": [
+    20,
+    100,
+    300
+   ]
+  }
+ },
+ "hiperparametros": {
+  "max_features": "sqrt",
+  "min_samples_leaf": 300
+ },
+ "origem_teste": "2023-02",
+ "regra_backtesting": "atual",
+ "resultado_validacao": {
+  "brier_medio": 0.0863,
+  "pr_auc_media_V1_V4": 0.5717,
+  "recall_top25_media": 0.7927
+ },
+ "semente": 42,
+ "sensibilidades_pre_registradas_no_teste": [
+  "backtesting_conservador",
+  "alvo_SA3_sem_pendentes_fim_serie"
+ ],
+ "sha256_codigo_informativo": {
+  "avaliacao.py": "0eaeaa0f5e26846a3ad2956aab4a6e642932b8b901d09126ba23c6c7cbc83002",
+  "painel.py": "85e1ab4960bdaf9090339eb6497d84315fa084685c4b850adf73276e2353a20f",
+  "treino.py": "c31f28302aa5b897a570b1e64ef42b8e2cfc695ecdc36a0365b0bf7a46d20b0c"
+ },
+ "sha256_protocolo": "5506786ef9c5439f82e678ba2aa81a7fe6fd40b43b2a85a008a08efa3c957b7d"
+}
